@@ -1,8 +1,8 @@
 import java.util.ArrayList;
-public class CustomerTable {
-    private String title = "Customer Table";
-    private ArrayList<String> attributes = new ArrayList<String>();
-    private ArrayList<ArrayList<String>> data = new ArrayList<ArrayList<String>>();
+public class CustomerTable extends Table {
+    String title = "Customer Table";
+    ArrayList<String> attributes = new ArrayList<String>();
+    ArrayList<ArrayList<String>> data = new ArrayList<ArrayList<String>>();
 
     public CustomerTable() {
         attributes.add("No");
@@ -19,13 +19,10 @@ public class CustomerTable {
             data.get(i).add(c.getStatus());
             i++;
         }
+
+        setTitle(title);
+        setAttributes(attributes);
+        setData(data);
     }
 
-    public void show() {
-        Table.show(title, attributes, data);
-    }
-
-    public void toCSV() {
-        Table.toCSV(title, attributes, data);
-    }
 }

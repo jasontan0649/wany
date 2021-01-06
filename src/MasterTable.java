@@ -1,21 +1,11 @@
 import java.util.ArrayList;
 
 public class MasterTable {
-    private String title = "Shop Table";
-    private ArrayList<String> attributes;
-    private ArrayList<ArrayList<String>> data;
-
 
     public MasterTable() {
+        String title = "Master Visit History ";
+        ArrayList<String> attributes;
+        ArrayList<ArrayList<String>> data;
 
-
-    }
-
-    public void show() {
-        Table.show(title, attributes, data);
-    }
-
-    public void toCSV() {
-        Table.toCSV(title, attributes, data);
     }
 }

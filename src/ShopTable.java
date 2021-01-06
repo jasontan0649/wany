@@ -1,11 +1,10 @@
 import java.util.ArrayList;
 
-public class ShopTable {
-    private String title = "Shop Table";
-    private ArrayList<String> attributes = new ArrayList<String>();
-    private ArrayList<ArrayList<String>> data = new ArrayList<ArrayList<String>>();
-
+public class ShopTable extends Table {
     public ShopTable() {
+        ArrayList<String> attributes = new ArrayList<String>();
+        ArrayList<ArrayList<String>> data = new ArrayList<ArrayList<String>>();
+
         attributes.add("No");
         attributes.add("Name");
         attributes.add("Phone");
@@ -22,13 +21,10 @@ public class ShopTable {
             data.get(i).add(s.getStatus());
             i++;
         }
+
+        setTitle("Shop Table");
+        setAttributes(attributes);
+        setData(data);
     }
 
-    public void show() {
-        Table.show(title, attributes, data);
-    }
-
-    public void toCSV() {
-        Table.toCSV(title, attributes, data);
-    }
 }
