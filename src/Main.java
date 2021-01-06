@@ -7,6 +7,7 @@ public class Main {
         new Customer("1111", "Jason", "0123", "Normal");
         new CustomerTable().toCSV();
 
-        ArrayList
+        ArrayList<ArrayList<String>> tmp = CSVFile.read("Customer Table");
+        System.out.println(tmp);
     }
 }
