@@ -50,7 +50,10 @@ public abstract class Table {
     }
 
     public void toCSV() {
-
+        ArrayList<ArrayList<String>> newData = new ArrayList<ArrayList<String>>();
+        newData.add(attributes);
+        newData.addAll(data);
+        CSVFile.write(title, newData);
     }
 
 }
